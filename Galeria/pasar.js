@@ -1,57 +1,51 @@
+var imagenes = ['../imagenes/foto1.jpg',
+'../imagenes/foto2.jpg','../imagenes/foto3.jpg',
+'../imagenes/foto4.jpg','../imagenes/foto5.jpg',
+'../imagenes/foto6.jpg','../imagenes/foto7.jpg',
+'../imagenes/foto8.jpg','../imagenes/foto9.jpg',
+'../imagenes/foto10.jpg']
 
-function rand(n)
-{
-    return(Math.floor(Math.random()*10+1))
-}
-
-var cambiar= new Array();
-cambiar[0]= "foto1.jpg";
-cambiar[1]= "foto2.jpg";
-cambiar[2]= "foto3.jpg";
-cambiar[3]= "foto4.jpg";
-cambiar[4]= "foto5.jpg";
-cambiar[5]= "foto6.jpg";
-cambiar[6]= "foto7.jpg";
-cambiar[7]= "foto8.jpg";
-cambiar[8]= "foto9.jpg";
-cambiar[9]= "foto10.jpg";
+cont=0;
+var nuevo = 0;
 
 
+    function cambio(contenedor) {
+   
+        var m = imagenes.length;
 
-
-function random()
-{
-    var foto=document.getElementById("foto").src = cambiar[rand(10)-1];
-    foto.src="foto"+num+".jpg"
-}
-
-
-
-
-
-var num=1;
-function siguiente()
-{
-    num++;
-    var foto=document.getElementById("foto")
-    foto.src="foto"+num+".jpg"
-    if(num>=10)
-    {
-        num=1;
+	    for(var i= 0;i<5;i++){
+            aleatorio = Math.floor(Math.random() * m--);
+            nuevo =nuevo+","+aleatorio;
+        }
+       
     }
-    var foto=document.getElementById("foto")
-    foto.src="foto"+num+".jpg"
     
-}
-function atras()
-{
-    num--
-    var foto=document.getElementById("foto")
-    foto.src="foto"+num+".jpg"
-    if(num<=1)
-    {
-        num=10;
-        var foto=document.getElementById("foto")
-        foto.src="foto"+num+".jpg"
+    document.addEventListener("DOMContentLoaded",() =>{
+       let contenedor = document.querySelector('.contenedor');
+    })
+
+  
+   contmax=0;
+   contmin=0;
+
+   function next(){
+        if(contmax<10){
+            contmax=contmax+2;
+            document.getElementById('imagen').src =imagenes[nuevo[contmax]];
+        }
+        
+         
+         
+ 
     }
-}
+
+
+   function prev(){
+        if(contmax > 0){
+            contmax=contmax-2;
+            document.getElementById('imagen').src =imagenes[nuevo[contmax]];
+        }
+        
+       
+    } 
+   

@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="UTF-8">
-    <head>
-        <meta charset="UTF-8"> 
-        <title>Galeria</title>
-        <link rel="stylesheet" href="/Galeria/estilos.css">
-        <script type="text/javascript" src="pasar.js"></script>
-    </head>
-    <body>
-        <form name="f1">
-            <img src="foto1.jpg" width="400" height="400" id="foto">
-            <br>
-            <input type="button" value="siguiente" onclick="siguiente()">
-            <input type="button" value="iniciar" onclick="random()">
-            <input type="button" value="atras" onclick="atras()">
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>galeria</title>
 
-        </form>
-    </body>
+	
+	<script type="text/javascript" src="pasar.js"></script>
+
+	
+</head>
+<body>
+        <div class="padre">
+
+               
+                <img src="../imagenes/foto1.jpg" name="imagen" id="imagen" width="500" height="500" />
+                <br>
+                <button id="atras" onclick="prev()">Atras</button>
+                <button id="inicio" onclick="cambio();">Inicio</button>
+                <button id="siguiente" onclick="next()">siguiente</button>
+               
+                
+        </div>
+
+</body>
 </html>
