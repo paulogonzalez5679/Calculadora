@@ -13,30 +13,28 @@
                 
                 <label for="cedula">Cedula</label>
                 <input type="text" id="cedula" placeholder="INGRESE SU CÉDULA" maxlength="10" onkeypress="return soloNumeros(event)" onKeyUp="cedulaEC('cedula');">
-
+                <br>
 				<label for="names">Nombres *</label>
                 <input type="text" id="nombre" size="2" onKeyUp="dosPalabrasN('nombre');" placeholder="nombre1 nombre2" onkeypress="return sololetras(event)">
-			
-
+                <br>
                 <label for="apellidos">Apellidos *</label>
                 <input type="text" id="apellido" onkeypress="return sololetras(event)">
-                
+                <br>
                 <label for="direccion">Direccion </label>
                 <input type="text" id="direccion" placeholder="INGRESE SU DIRECCION">
-
+                <br>
 				<label for="phone">Telefono / Celular</label >
                 <input type="text" id="phone" placeholder="INGRESE SU TELEFONO" maxlength="10" onkeypress="return soloNumeros(event)"> 
-                
+                <br>
                 <label for="fechaNac">Fecha Nacimiento</label>
                 <input type="text" id="fechaNac" placeholder="DDMMYYYY" maxlength="8" onkeypress="return soloNumeros(event)" onKeyUp="ValidarFecha('fechaNac');">
-
+                <br>
 				<div id="Mensaje"></div>
-
+                
 				<label for="email">Correo electronico </label>
 				<input type="text" id="email" placeholder="CORREO ELECTRONICO UPS" onKeyUp="ValidarMail('email')" >
 				
 				<h2 id='result'></h2>
-
 				<input type="submit" value="Registrarse" id="submit">
 			</div>
 		</form>
