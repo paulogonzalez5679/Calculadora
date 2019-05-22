@@ -1,16 +1,59 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Formulario de Contacto</title>
-        <script type="text/javascript" src="validar.js"></script>
-    </head>
-    <body>
-    <h1>FORMULARIO DE REGISTRO</h1>
-    <form accion="registrar.php">
+<html lang="span">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Formulario de Contacto</title>
 
-    </form> 
+	<script type="text/javascript" src="valida.js"></script>
 
-        
-    </body>
+	
+</head>
+<body>
+	<section class="form_wrap">
+		<section class="contact_info">
+			<section class="info_title">
+				<span class="fa fa-user-circle"></span>
+				<h2>INFORMACION<br>DE CONTACTO</h2>
+			</section> 
+			<section class="info_items">
+				<p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
+				<p><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
+			</section>
+		</section>
+		<form action="" class="form_contact" method="POST" onsubmit="return validarCamposObligatorios ()">
+			<div class="user_info">
+                
+                <label for="cedula">Cedula</label>
+                <input type="text" id="cedula" placeholder="INGRESE SU CÉDULA" maxlength="10" onkeypress="return soloNumeros(event)" onKeyUp="cedulaEC('cedula');">
+
+				<label for="names">Nombres *</label>
+                <input type="text" id="nombre" size="2" onKeyUp="dosPalabrasN('nombre');" placeholder="ANA ISABEL" onkeypress="return sololetras(event)">
+			
+
+                <label for="apellidos">Apellidos *</label>
+                <input type="text" id="apellido" onkeypress="return sololetras(event)">
+                
+                <label for="direccion">Direccion </label>
+                <input type="text" id="direccion" placeholder="INGRESE SU DIRECCION">
+
+				<label for="phone">Telefono / Celular</label >
+                <input type="text" id="phone" placeholder="INGRESE SU TELEFONO" maxlength="10" onkeypress="return soloNumeros(event)"> 
+                
+                <label for="fechaNac">Fecha Nacimiento</label>
+                <input type="text" id="fechaNac" placeholder="DDMMYYYY" maxlength="8" onkeypress="return soloNumeros(event)" onKeyUp="ValidarFecha('fechaNac');">
+
+				<div id="Mensaje"></div>
+
+				<label for="email">Correo electronico </label>
+				<input type="text" id="email" placeholder="CORREO ELECTRONICO UPS" onKeyUp="ValidarMail('email')" >
+				
+				<h2 id='result'></h2>
+
+				<input type="submit" value="Registrarse" id="submit">
+			</div>
+		</form>
+		<div id="salida"></div>
+	</section>
+</body>
 </html>
