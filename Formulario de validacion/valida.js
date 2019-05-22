@@ -42,12 +42,12 @@ function ValidarFecha(fechaNac){
     document.getElementById('Mensaje').className = '';
     
     // Si la fecha está completa comenzamos la validación
-    if(Fecha.length == 8){
+    if(Fecha.length == 10){
 
         var Anio = Fecha.substr(4, 4); 
         var Mes = parseFloat(Fecha.substr(2, 2)) - 1; 
         var Dia = Fecha.substr(0, 2); 
-        var Fecha = new Date(Anio, Mes, Dia);
+        var Fecha = new Date(Anio,"/", Mes,"/",Dia);
         if((VFecha.getFullYear() == Anio) && (VFecha.getMonth() == Mes) && (VFecha.getDate() == Dia))
         {
              object.style.color="#000";
@@ -73,7 +73,7 @@ function soloNumeros(elemento){
 
     teclado=String.fromCharCode(key).toLowerCase();
 
-    numeros="0123456789 ";
+    numeros="0123456789/";
 
     especiales=false;
 
