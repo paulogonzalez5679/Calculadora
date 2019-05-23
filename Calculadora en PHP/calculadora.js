@@ -123,7 +123,12 @@ function porcentaje()
       pantalla(n2);
    }
 }
-
+function cuadrado()
+{
+   n1 = Math.pow(n1,2);
+   nuevoNum="blank";
+   pantalla(n1);
+}
 function divUno() 
 {
    n1 = 1/n1;
@@ -137,6 +142,7 @@ function negativo()
    pantalla(n1);
 }
 function igual() {
+if(opvalue == '²') cuadrado(0);
 if(opvalue == '+') suma(0);
 if(opvalue == '-') resta(0);
 if(opvalue == '*') multi(0);
