@@ -20,14 +20,14 @@
             CUADRADO DE 4 
             ![1](https://github.com/paulogonzalez5679/Practica03-Javascrip/blob/master/Screenshots/8.png)
             
-        -	PRACTICA PARTE 2, FORMULARIO
+      PRACTICA PARTE 2, FORMULARIO
           ![1](https://github.com/paulogonzalez5679/Practica03-Javascrip/blob/master/Screenshots/9.png)
           VALIDANDO CAMPOS, SE DEJA UN CAMPO VACIO, EN ESTE CASO EL DE FECHA
           ![1](https://github.com/paulogonzalez5679/Practica03-Javascrip/blob/master/Screenshots/10.png)
           TODOS LOS CAMPOS LLENOS Y CORRECTOS
           ![1](https://github.com/paulogonzalez5679/Practica03-Javascrip/blob/master/Screenshots/11.png)
        
-       - PARTE 3, GALERIA DE FOTOS.
+      -PARTE 3, GALERIA DE FOTOS.
           ![1](https://github.com/paulogonzalez5679/Practica03-Javascrip/blob/master/Screenshots/12.png)
           ESCOJE 5 FOTOS Y SE DESACTIVA EL BOTON UNA VEZ QUE LLEGA A LA QUINTA Y SI REGRESA A LA PRIMERA SE DESACTIVA
           ![1](https://github.com/paulogonzalez5679/Practica03-Javascrip/blob/master/Screenshots/13.png)
