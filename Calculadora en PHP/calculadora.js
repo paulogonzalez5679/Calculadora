@@ -15,7 +15,7 @@ data = 0;
 document.calculator.mem.value = "";
 }
 
-function borrado () 
+function borrado() 
 {
 n1 = "";
 n2 = "";
@@ -23,7 +23,7 @@ nuevoNum = "blank";
 pantalla("");
 }
 
-function borradoMemoria ()
+function borradoMemoria()
 {
 n2 = "";
 nuevoNum = "yes";

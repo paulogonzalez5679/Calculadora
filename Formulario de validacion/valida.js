@@ -1,4 +1,4 @@
-function validarCamposObligatorios(){
+function camposNoVacios(){
     var cedula, nombre, apellido, direccion, phone, fechaNac,email;
     nombre = document.getElementById("nombre").value;
     apellido = document.getElementById("apellido").value;
@@ -8,7 +8,7 @@ function validarCamposObligatorios(){
     email = document.getElementById("email").value;
 
     if(nombre =="" || apellido =="" || direccion =="" || phone =="" || fechaNac =="" || email == "" ){
-        alert("Todos los campos son obligatorios");
+        alert("EXISTEN CAMPOS VACIOS");
     return false;
     }
 }
@@ -36,12 +36,11 @@ function sololetras(elemento) {
 }
 function ValidarFecha(fechaNac){
     object=document.getElementById(fechaNac);
-    // Almacenamos el valor digitado en TxtFecha
     var Fecha = document.getElementById('fechaNac').value;
     var Mensaje = '';
     document.getElementById('Mensaje').className = '';
     
-    // Si la fecha está completa comenzamos la validación
+  
     if(Fecha.length == 10){
 
         var Anio = Fecha.substr(4, 4); 
@@ -116,7 +115,7 @@ function ValidarMail(email){
 
 
     
-function cedulaEC(cedula) {
+function validarCedula(cedula) {
     object=document.getElementById(cedula);
     var cad = document.getElementById("cedula").value.trim();
     var total = 0;
@@ -137,12 +136,14 @@ function cedulaEC(cedula) {
       total = total % 10 ? 10 - total % 10 : 0;
 
       if (cad.charAt(longitud-1) == total) {
-       object.style.color="#000"; 
-       return;
-
+       object.style.color="#000";
+       
+       return ;
+       
       }else{
 
         object.style.color="#f00";
+        
       }
     }
   }
