@@ -46,8 +46,8 @@ function ValidarFecha(fechaNac){
         var Anio = Fecha.substr(4, 4); 
         var Mes = parseFloat(Fecha.substr(2, 2)) - 1; 
         var Dia = Fecha.substr(0, 2); 
-        var Fecha = new Date(Anio,"/", Mes,"/",Dia);
-        if((VFecha.getFullYear() == Anio) && (VFecha.getMonth() == Mes) && (VFecha.getDate() == Dia))
+        var Fecha = new Date(Anio, Mes,Dia);
+        if((Fecha.getFullYear() == Anio) && (Fecha.getMonth() == Mes) && (Fecha.getDate() == Dia))
         {
              object.style.color="#000";
              return; 
@@ -115,7 +115,7 @@ function ValidarMail(email){
 
 
     
-function validarCedula(cedula) {
+function cedulaEC(cedula) {
     object=document.getElementById(cedula);
     var cad = document.getElementById("cedula").value.trim();
     var total = 0;
@@ -129,21 +129,20 @@ function validarCedula(cedula) {
           if (aux > 9) aux -= 9;
           total += aux;
         } else {
-          total += parseInt(cad.charAt(i)); 
+          total += parseInt(cad.charAt(i)); // parseInt o concatenará en lugar de sumar
         }
       }
 
       total = total % 10 ? 10 - total % 10 : 0;
 
       if (cad.charAt(longitud-1) == total) {
-       object.style.color="#000";
-       
-       return ;
-       
+       // document.getElementById("salida").innerHTML = ("Cedula Válida");
+       object.style.color="#000"; 
+       return;
+
       }else{
 
         object.style.color="#f00";
-        
       }
     }
   }
