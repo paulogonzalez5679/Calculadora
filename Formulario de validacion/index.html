@@ -9,39 +9,39 @@
 </head>
 <body>
 	<section >
-		<form action="crear_usuario.php" class="form_contact" method="POST" onsubmit="return validarCamposObligatorios ()">
+	
+		<form action="../Formulario de validacion/crear_usuario.php" class="form_contact" method="POST" onsubmit="return validarCamposObligatorios()">
 			<div class="user_info">
-                
-                <label for="cedula">Cedula</label>
-                <input type="text" id="cedula" placeholder="INGRESE SU CÉDULA" maxlength="10" onkeypress="return soloNumeros(event)" onKeyUp="cedulaEC('cedula');">
-
-				<label for="names">Nombres *</label>
-                <input type="text" id="nombre" size="2" placeholder="ANA ISABEL" onkeypress="return sololetras(event)">
+                <br>
+                <label for="cedula">Cedula*</label>
+                <input type="text" id="cedula" size="25" placeholder="INGRESE SU CÉDULA" maxlength="10" onkeypress="return soloNumeros(event)" onKeyUp="cedulaEC('cedula');">
+				<br>
+				<label for="names">Nombres*</label>
+                <input type="text" id="nombre" size="22" placeholder="NOMBRE" onkeypress="return sololetras(event)">
 			
-
-                <label for="apellidos">Apellidos *</label>
-                <input type="text" id="apellido" onkeypress="return sololetras(event)">
-                
+				<br>
+                <label for="apellidos">Apellidos*</label>
+                <input type="text" id="apellido" size="22" placeholder="APELLIDO" onkeypress="return sololetras(event)">
+				<br>
                 <label for="direccion">Direccion </label>
-                <input type="text" id="direccion" placeholder="INGRESE SU DIRECCION">
-
-				<label for="phone">Telefono / Celular</label >
-                <input type="text" id="phone" placeholder="INGRESE SU TELEFONO" maxlength="10" onkeypress="return soloNumeros(event)"> 
-                
-                <label for="fechaNac">Fecha Nacimiento</label>
-                <input type="text" id="fechaNac" placeholder="DDMMYYYY" maxlength="8" onkeypress="return soloNumeros(event)" onKeyUp="ValidarFecha('fechaNac');">
-
+                <input type="text" id="direccion" size="23" placeholder="INGRESE SU DIRECCION">
+				<br>
+				<label for="phone">Celular*</label >
+                <input type="text" id="phone" size="25" placeholder="INGRESE SU TELEFONO" maxlength="10" onkeypress="return soloNumeros(event)"> 
+                <br>
+                <label for="fechaNac">Fecha Nacimiento*</label>
+                <input type="text" id="fechaNac" size= "12" placeholder="DD/MM/YYYY" maxlength="10" onkeypress="return soloNumeros(event)" onKeyUp="ValidarFecha('fechaNac');">
+				<br>
 				<div id="Mensaje"></div>
-
-				<label for="email">Correo electronico </label>
-				<input type="text" id="email" placeholder="CORREO ELECTRONICO UPS" onKeyUp="ValidarMail('email')" >
-				
+				<label for="email">Correo electronico*</label>
+				<input type="text" id="email" size="12" placeholder="CORREO UPS" onKeyUp="ValidarMail('email')" >
+				<br>
 				<h2 id='result'></h2>
-
 				<input type="submit" value="Registrarse" id="submit">
 			</div>
 		</form>
 		<div id="salida"></div>
+	
 	</section>
 </body>
 </html>
