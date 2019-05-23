@@ -1,4 +1,4 @@
-/*
+
 function validarCamposObligatorios(){
     var cedula, nombre, apellido, direccion, phone, fechaNac,email;
     nombre = document.getElementById("nombre").value;
@@ -7,15 +7,40 @@ function validarCamposObligatorios(){
     phone = document.getElementById("phone").value;
     fechaNac = document.getElementById("fechaNac").value;
     email = document.getElementById("email").value;
-    if(nombre =="" || apellido =="" || direccion =="" || phone =="" || fechaNac =="" || email == "" ){
-        alert("Todos los campos son obligatorios");
-    return false;
+    if(nombre ==""){
+        alert("Campo Nombre vacio");
+         return false;
+    }
+    else if(apellido =="" )
+    {
+        alert("Campo Apellido Vacio");
+        return false;
+    }
+    else if(direccion =="" )
+    {
+        alert("Campo Direccion Vacio");
+        return false;
+    }
+    else if(phone =="")
+    {
+        alert("Campo Celular Vacio");
+        return false;
+    }
+    else if(fechaNac =="")
+    {
+        alert("Campo fecha de nacimiento Vacio");
+        return false;
+    }
+    else if(email == "")
+    {
+        alert("Campo correo Vacio");
+        return false;
     }
 }
-*/
 
 
-function validarCamposObligatorios(){
+
+/*function validarCamposObligatorios(){
 
     var bandera = false
     
@@ -70,7 +95,7 @@ function validarCamposObligatorios(){
         return true
     }
 
-} 
+} */
 
 
 
